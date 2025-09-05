@@ -1,0 +1,243 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(270deg, black, white, black,white);
+  background-size: 600% 600%; 
+  animation: gradientMove 5s ease infinite; 
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Gradient animatsiyasi */
+@keyframes gradientMove {
+  0% {
+    background-position: 20% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 20% 50%;
+  }
+}
+
+.url-img{
+  display: flex;
+}
+
+/* Container */
+.container {
+  width: 250px;
+  max-width: 420px;
+  padding: 30px 35px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  animation: fadeIn 0.6s ease;
+  background:transparent;
+   background: rgba(155, 155, 155, 0.100); 
+  backdrop-filter: blur(6px); 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+/* Headings */
+.title, .welcome {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+   text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+   animation: fadeText 3s ease-in-out infinite alternate;
+}
+@keyframes fadeText {
+  from { opacity: 0.9; }
+  to { opacity: 1; }
+}
+
+.welcome span {
+  color: #6c63ff;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form input {
+  padding: 12px 15px;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+form input:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+  border-color: #6c63ff; 
+}
+
+
+
+
+/* Buttons */
+.btn {
+  padding: 12px;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.btn.primary {
+  
+  color: #fff;
+}
+
+.btn.primary:hover {
+  font-size: 19px;
+}
+
+.btn.logout {
+  background: #ff4b5c;
+  color: #fff;
+  
+   
+}
+
+.btn.logout:hover {
+  background: #d7384b;
+ 
+}
+
+.btn:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Links */
+.link {
+  color: #6c63ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+/* Error */
+.error {
+  margin-top: 10px;
+  color: #e74c3c;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Switch text */
+.switch {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Button group */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* Users list */
+.users-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.user-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.user-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 3px solid #6c63ff;
+  object-fit: cover;
+}
+
+.user-card h4 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.user-card p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Online/offline rang */
+.user-card .status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.user-card .online {
+  background: #4caf50;
+  box-shadow: 0 0 10px #4caf50;
+  
+}
+
+.user-card .offline {
+  background: #e74c3c;
+  box-shadow: 0 0 10px #e74c3c;
+}
