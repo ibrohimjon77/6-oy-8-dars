@@ -1,14 +1,18 @@
-import React from 'react'
+import React from "react";
 
-function FromTextArea({label,name,type}) {
+function FormTextArea({ label, name, type }) {
   return (
-    <div>
-        <label htmlFor={label}></label>
-        <br />
-        <textarea type={type} name={name} />
-        <hr />
+    <div className="form-control w-full">
+      <label className="label">
+        <span className="label-text font-semibold text-gray-700">{label}</span>
+      </label>
+      <input
+        type={type}
+        name={name}
+        className="input input-bordered w-full rounded-xl border-2 border-green-300 focus:border-green-500 focus:ring-4 focus:ring-green-200 shadow-sm transition-all duration-300"
+      />
     </div>
-  )
+  );
 }
 
-export default FromTextArea
+export default FormTextArea;
